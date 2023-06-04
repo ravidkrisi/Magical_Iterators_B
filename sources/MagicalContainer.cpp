@@ -297,6 +297,7 @@ namespace ariel
      */
     bool MagicalContainer::SideCrossIterator::operator==(const MagicalContainer::SideCrossIterator &other) const
     {
+        if (this->container_.container_ != other.container_.container_) throw std::invalid_argument("cant compare different iterator of different containers");
         return (index_ == other.index_);
     }
 
