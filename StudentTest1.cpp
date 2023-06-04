@@ -127,8 +127,8 @@ TEST_CASE("PrimeIterator") {
         CHECK(it == it.end());
     }
 }
-//--------------------------------------------------------------
-// Test case for comparing iterators from the same container
+////--------------------------------------------------------------
+//// Test case for comparing iterators from the same container
 TEST_CASE("Comparing iterators from the same container") {
     MagicalContainer container;
     for (int i = 1; i <= 10; ++i) {
@@ -162,8 +162,8 @@ TEST_CASE("Comparing iterators from the same container") {
         CHECK(!(it1 > it2));
     }
 }
-//------------------------------------------------------
-// Test case for traversing the AscendingIterator
+////------------------------------------------------------
+//// Test case for traversing the AscendingIterator
 TEST_CASE("Traversing AscendingIterator") {
     MagicalContainer container;
     container.addElement(1);
@@ -188,7 +188,7 @@ TEST_CASE("Traversing AscendingIterator") {
     }
 }
 
-// Test case for traversing the PrimeIterator
+//// Test case for traversing the PrimeIterator
 TEST_CASE("Traversing PrimeIterator") {
     MagicalContainer container;
     container.addElement(1);
@@ -207,7 +207,7 @@ TEST_CASE("Traversing PrimeIterator") {
     }
 }
 
-// Test case for the SideCrossIterator
+//// Test case for the SideCrossIterator
 TEST_CASE("SideCrossIterator") {
     MagicalContainer container;
     container.addElement(1);
@@ -232,8 +232,8 @@ TEST_CASE("SideCrossIterator") {
         CHECK(it == it.end());
     }
 }
-//-------------------------------------------------------
-// Test case for comparing AscendingIterator
+////-------------------------------------------------------
+//// Test case for comparing AscendingIterator
 TEST_CASE("Comparing AscendingIterator") {
     MagicalContainer container;
     container.addElement(1);
@@ -304,7 +304,7 @@ TEST_CASE("Comparing AscendingIterator") {
 }
 
 
-// Test case for comparing PrimeIterator
+//// Test case for comparing PrimeIterator
 TEST_CASE("Comparing PrimeIterator") {
     MagicalContainer container;
     container.addElement(1);
@@ -352,7 +352,7 @@ TEST_CASE("Comparing PrimeIterator") {
 }
 
 
-// Test case for comparing SideCrossIterator
+//// Test case for comparing SideCrossIterator
 TEST_CASE("Comparing SideCrossIterator") {
     MagicalContainer container;
     container.addElement(1);
@@ -389,7 +389,7 @@ TEST_CASE("Comparing SideCrossIterator") {
         CHECK_FALSE((itStart1 < itStart1));
     }
 }
-//---------------------------------------------------
+////---------------------------------------------------
 TEST_CASE("Iterator Increment Beyond End") {
     MagicalContainer container;
     container.addElement(1);
@@ -405,7 +405,7 @@ TEST_CASE("Iterator Increment Beyond End") {
         while (it != it.end()) {
             ++it;
         }
-    
+
         // Attempt to increment beyond the end
         CHECK_THROWS_AS(++it, runtime_error);
     }
@@ -434,7 +434,7 @@ TEST_CASE("Iterator Increment Beyond End") {
         CHECK_THROWS_AS(++it, runtime_error);
     }
 }
-//checking that the iterators dont impact each other
+////checking that the iterators dont impact each other
 TEST_CASE("Multiple Iterators Test") {
     MagicalContainer container;
     container.addElement(1);
@@ -490,7 +490,7 @@ TEST_CASE("Multiple Iterators Test") {
         CHECK(*it2 == 7);
     }
 }
-// Test case for the AscendingIterator with negative and positive numbers
+//// Test case for the AscendingIterator with negative and positive numbers
 TEST_CASE("AscendingIterator with Negative and Positive Numbers") {
     MagicalContainer container;
     container.addElement(-3);
@@ -571,7 +571,7 @@ TEST_CASE("operator= throws when iterators are pointing at different containers"
 
     container2.addElement(4);
     container2.addElement(5);
-    container2.addElement(6);    
+    container2.addElement(6);
 
    SUBCASE("AscendingIterator")
    {
