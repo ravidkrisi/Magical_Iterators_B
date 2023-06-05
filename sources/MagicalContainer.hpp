@@ -2,6 +2,7 @@
 #include <set>
 #include <iostream>
 #include <stdexcept>
+#include <algorithm>
 
 using namespace std;
 namespace ariel {
